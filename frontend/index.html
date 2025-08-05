@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Sharing Analytics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ride Sharing Analytics</h1>
+        
+        <div class="card">
+            <h2>Create User</h2>
+            <form id="createUserForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Create User</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Create Alert</h2>
+            <form id="createAlertForm">
+                <input type="number" id="user_id" placeholder="User ID" required>
+                <input type="text" id="symbol" placeholder="Symbol (e.g., BTCUSD)" required>
+                <input type="number" step="0.01" id="price" placeholder="Target Price" required>
+                <button type="submit">Create Alert</button>
+            </form>
+        </div>
+
+        <div id="response" class="response"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
