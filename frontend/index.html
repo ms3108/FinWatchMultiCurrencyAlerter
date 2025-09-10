@@ -3,35 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ride Sharing Analytics</title>
+    <title>Fin Analytics</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Ride Sharing Analytics</h1>
+        <h1>Fin Analytics</h1>
         
         <div class="card">
             <h2>Create User</h2>
             <form id="createUserForm">
                 <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="username" placeholder="Username" required>
                 <input type="password" id="password" placeholder="Password" required>
                 <button type="submit">Create User</button>
             </form>
         </div>
 
         <div class="card">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="login_username" placeholder="Username" required>
+                <input type="password" id="login_password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div style="margin-top:10px; display:flex; align-items:center; gap:8px;">
+                <span id="authInfo">Logged out</span>
+                <button id="logoutBtn" style="width:auto; display:none;">Logout</button>
+            </div>
+        </div>
+
+        <div class="card">
             <h2>Create Alert</h2>
             <form id="createAlertForm">
-                <input type="number" id="user_id" placeholder="User ID" required>
-                <input type="text" id="symbol" placeholder="Symbol (e.g., BTCUSD)" required>
-                <input type="number" step="0.01" id="price" placeholder="Target Price" required>
+                <input type="text" id="base_currency" placeholder="Base Currency (e.g., BTC)" required>
+                <input type="text" id="quote_currency" placeholder="Quote Currency (e.g., USD)" required>
+                <input type="number" step="0.01" id="target_rate" placeholder="Target Rate" required>
+                <select id="condition" required>
+                    <option value="ABOVE">ABOVE</option>
+                    <option value="BELOW">BELOW</option>
+                </select>
                 <button type="submit">Create Alert</button>
             </form>
+        </div>
+
+        <div class="card">
+            <h2>Your Alerts</h2>
+            <div id="alertsList" class="response">Login to load alerts.</div>
         </div>
 
         <div id="response" class="response"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>
