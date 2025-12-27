@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Snarky Overlay</string>
+    <string name="service_name">Snarky Assistant</string>
+    <string name="service_description">Reads your screen and judges you.</string>
+</resources>
